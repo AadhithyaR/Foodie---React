@@ -1,0 +1,306 @@
+.App {
+  text-align: center;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+/* 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+#banner {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#banner #banner-images {
+  height: 100%;
+  position: relative;
+  object-fit: cover;
+  z-index: -10;
+  filter: brightness(0.7) grayscale(0.6);
+  /* animation: banner-change 15s infinite ease-in-out; */
+  display: flex;
+  flex-direction: row;
+}
+#banner #banner-images img {
+  width: 100vw;
+  object-fit: cover;
+}
+/* 
+@keyframes banner-change{
+    0% {
+        right: -200vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    20.5% {
+        right: -200vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    22.5% {
+        right: -200vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    23% {
+        right: -100vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    25% {
+        right: -100vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    45.5% {
+        right: -100vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    47.5% {
+        right: -100vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    48% {
+        right: 0vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    50% {
+        right: 0vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    70.5% {
+        right: 0vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    72.5% {
+        right: 0vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    73% {
+        right: 100vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    75% {
+        right: 100vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    95.5% {
+        right: 100vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+    97.5% {
+        right: 100vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    98% {
+        right: 200vw;
+        filter: brightness(0) grayscale(0.6);
+    }
+    100% {
+        right: 200vw;
+        filter: brightness(0.7) grayscale(0.6);
+    }
+} */
+
+#banner h1 {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 40px;
+  letter-spacing: 8px;
+  color: rgb(230, 255, 255);
+  text-shadow: 2px 2px 8px rgb(206, 206, 206);
+  animation: color-cycle 5s infinite ease-in-out;
+  color: rgb(233, 233, 233);
+  text-transform: uppercase;
+  margin-top: -14px;
+  text-align: center;
+  width: 90%;
+}
+
+#banner .today-class {
+  position: absolute;
+  font-family: sans-serif;
+  font-size: 40px;
+  letter-spacing: 8px;
+  color: rgb(230, 255, 255);
+  text-shadow: 2px 2px 8px rgb(206, 206, 206);
+  animation: color-cycle 5s infinite ease-in-out;
+  color: rgb(233, 233, 233);
+  text-transform: uppercase;
+  margin-top: 200px;
+  text-align: center;
+  width: 90%;
+}
+
+/* categories  */
+
+.full-gallery {
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  /* max-width: 1170px; */
+  /* transform: translateX(-50%) translateY(-50%); */
+}
+.image-gallery {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.image-gallery .gallery-items {
+  margin: 15px;
+  width: 300px;
+  height: 300px;
+  background-color: #f9f9f9;
+  border-radius: 50%;
+  transition: background-color 0.25s ease;
+}
+.gallery-items:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+.image-gallery .gallery-items .item {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(0.9);
+  overflow: hidden;
+  border-radius: 50%;
+  transition: transform 0.25s ease;
+}
+.gallery-items:hover .item {
+  transform: translateX(-50%) translateY(-50%) scale(1);
+}
+.image-gallery .gallery-items .item img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s ease;
+}
+.item:hover img {
+  transform: scale(1.08);
+}
+.image-gallery .gallery-items .item .item-title {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.image-gallery .gallery-items .item .transparent-back {
+  position: absolute;
+  background-color: #000000;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+}
+.image-gallery .gallery-items .item .transparent-back:hover {
+  opacity: 0;
+  animation: 0.25s fade-back forwards ease;
+}
+@keyframes fade-back {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+.item-title .title-text > p:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  font-size: 1.5em;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(-500%);
+  color: #ffffff;
+  opacity: 0;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+.item-title:hover .title-text > p:nth-child(1) {
+  transform: translateX(-50%) translateY(-60%);
+  opacity: 1;
+}
+.title-text > p:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  font-size: 1em;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(500%);
+  color: #cccccc;
+  opacity: 0;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+.item-title:hover .title-text > p:nth-child(2) {
+  transform: translateX(-50%) translateY(60%);
+  opacity: 1;
+}
+
+.meal-cards {
+  padding-top: 10px;
+  padding-bottom: 33px;
+  display: flex;
+  gap: 28px;
+}
+
+.card-responsive {
+  width: 26rem;
+}
+
+@media screen and (max-width: 780px) {
+  .meal-cards {
+    display: block;
+  }
+  .card-responsive {
+    width: auto;
+  }
+  #banner .today-class {
+    font-size: 14px;
+  }
+}
