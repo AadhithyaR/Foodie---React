@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Foodie---React/static/css/main.564a1e9f.css",
+    "main.js": "/Foodie---React/static/js/main.36f86df8.js",
+    "static/js/453.fd2f0c4a.chunk.js": "/Foodie---React/static/js/453.fd2f0c4a.chunk.js",
+    "index.html": "/Foodie---React/index.html",
+    "main.564a1e9f.css.map": "/Foodie---React/static/css/main.564a1e9f.css.map",
+    "main.36f86df8.js.map": "/Foodie---React/static/js/main.36f86df8.js.map",
+    "453.fd2f0c4a.chunk.js.map": "/Foodie---React/static/js/453.fd2f0c4a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.564a1e9f.css",
+    "static/js/main.36f86df8.js"
+  ]
+}
